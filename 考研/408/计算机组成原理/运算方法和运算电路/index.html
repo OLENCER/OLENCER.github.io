@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="OLENCER.">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://olencer.github.io/考研/408/计算机组成原理/运算方法和运算电路/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="false">
+<meta property="og:type" content="article">
+<meta property="og:title" content="运算方法和运算电路">
+<meta property="og:url" content="https://olencer.github.io/%E8%80%83%E7%A0%94/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF/index.html">
+<meta property="og:site_name" content="竫酲OLENCER.">
+<meta property="og:description" content="false">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/03.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/04.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/05.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/06.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/07.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/08.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/09.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/10.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/11.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/12.png">
+<meta property="og:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/13.png">
+<meta property="article:published_time" content="2023-08-16T15:21:06.000Z">
+<meta property="article:modified_time" content="2023-08-20T12:46:03.000Z">
+<meta property="article:author" content="olencer">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://olencer.github.io/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/03.png">
+    
+    
+        <!-- Google tag (gtag.js) -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-0HWLL8FQLY"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0HWLL8FQLY');
+        </script>
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.jpg">
+    <meta name="theme-color" content="#add8e6">
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            运算方法和运算电路 -
+        
+        OLENCER&#39;s blog.
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    
+<script src="/js/libs/anime.min.js"></script>
+
+    <h1 class="ml13">
+        OLENCER&#39;s blog.
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    <!--- Font Part-->
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    
+    
+    
+
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"olencer.github.io","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Infinity"]},"code_block":{"copy":true,"style":"mac","font":{"enable":true,"family":"JetBrains Mono","url":"https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#add8e6","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":"LXGWWenKai","url":null},"english":{"enable":false,"family":"JetBrains Mono","url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":true,"id":"G-0HWLL8FQLY"}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"竫酲OLENCER.","subtitle":{"text":["竫饮青从，醉享酲红。"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/OLENCER","instagram":null,"zhihu":null,"twitter":"https://twitter.com/0lencer","email":"jing255629@gmail.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"10.9.0"}},"version":"2.6.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":10},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Category":{"path":"/categories","icon":"fa-regular fa-folder"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"恭候多时","links":null},"article_date_format":"auto","categories":{"enable":true,"limit":6},"tags":{"enable":true,"limit":3}},"footerStart":"2023/5/14 00:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                OLENCER&#39;s blog.
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    CATEGORY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-regular fa-tags fa-fw"></i>
+                                    TAGS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                CATEGORY
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                TAGS
+                            </span>
+                            
+                                <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">66</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                
+                
+                <img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/00.jpg" alt="运算方法和运算电路" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-start">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-bold backdrop-blur-lg rounded-xl border border-border-color ">运算方法和运算电路</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/favicon.jpg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">OLENCER.</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Infinity</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-08-16 23:21:06</span>
+        <span class="mobile">2023-08-16 23:21:06</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-08-20 20:46:03</span>
+            <span class="mobile">2023-08-20 20:46:03</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%80%83%E7%A0%94/">考研</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E8%80%83%E7%A0%94/408/">408</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E8%80%83%E7%A0%94/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h3 id="基本运算部件"><a href="#基本运算部件" class="headerlink" title="基本运算部件"></a>基本运算部件</h3><hr>
+<h4 id="全加器-Full-Adder-FA"><a href="#全加器-Full-Adder-FA" class="headerlink" title="全加器(Full-Adder, FA)"></a>全加器(Full-Adder, FA)</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/03.png"
+                     
+                ></p>
+<p>$$<br>S_{i} &#x3D; A_{i} \oplus B_{i} \oplus C_{i - 1} \ \<br>C_{i} &#x3D; A_{i}B_{i} + (A_{i} \oplus B_{i}) C_{i - 1}<br>$$</p>
+<h4 id="串行进位的并行加法器-行波进位加法器-Ripple-Carry-Adders-RIP"><a href="#串行进位的并行加法器-行波进位加法器-Ripple-Carry-Adders-RIP" class="headerlink" title="串行进位的并行加法器(行波进位加法器, Ripple-Carry Adders, RIP)"></a>串行进位的并行加法器(行波进位加法器, Ripple-Carry Adders, RIP)</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/04.png"
+                     
+                ></p>
+<h4 id="并行进位的并行加法器-超前进位加法器-Carry-Lookahead-Adders-CLA"><a href="#并行进位的并行加法器-超前进位加法器-Carry-Lookahead-Adders-CLA" class="headerlink" title="并行进位的并行加法器(超前进位加法器, Carry-Lookahead Adders, CLA)"></a>并行进位的并行加法器(超前进位加法器, Carry-Lookahead Adders, CLA)</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/05.png"
+                     
+                ></p>
+<p>令 $ G_{i} &#x3D; A_{i} B_{i}, P_{i} &#x3D; A_{i} \oplus B_{i} $,全加器进位表达式为<br>$$<br>C_{i} &#x3D; G_{i} + P_{i}C_{i - 1} (G_{i} &#x3D; 1 或 P_{i}C_{i - 1} &#x3D; 1 时, C_{i} &#x3D; 1)<br>$$<br>当 $ A_{i} $ 与 $ B_{i} $ 都为1时, $ C_{i} &#x3D; 1 $, 即有进位信号产生, 所以称 $ A_{i}B_{i} $ 为进位产生函数(本地进位), 用 $ G_{i} $ 表示。</p>
+<p>当 $ A_{i} \oplus B_{i} &#x3D; 1 $ 且 $ C_{i - 1} &#x3D; 1 $ 时, $ C_{i} &#x3D; 1 $ 。可视为 $ A_{i} \oplus B_{i} &#x3D; 1 $, 第 $ i-1 $ 位的进位信号 $ C_{i - 1} $ 可以通过本位向高位传送。因此称 $ A_{i} \oplus B_{i}$ 为进位传递函数(进位传递条件), 用 $ P_{i} $ 表示。<br>$$<br>\begin{align}<br>    C_{1} &amp;&#x3D; G_{1} + P_{1}C_{0} \\<br>    C_{2} &amp;&#x3D; G_{2} + P_{2}C_{1} &#x3D; G_{2} + P_{2}(G_{1} + P_{1}C_{0}) &#x3D; G_{2} + P_{2}G_{1}  + P_{2}P_{1}C_{0} \\<br>    C_{3} &amp;&#x3D; G_{3} + P_{3}C_{2} &#x3D; G_{3} + P_{3}(G_{2} + P_{2}G_{1}  + P_{2}P_{1}C_{0}) &#x3D; G_{3} + P_{3}G_{2} + P_{3}P_{2}G_{1}  + P_{3}P_{2}P_{1}C_{0} \\<br>    C_{4} &amp;&#x3D; G_{4} + P_{4}C_{3} &#x3D; G_{4} + P_{4}(G_{3} + P_{3}G_{2} + P_{3}P_{2}G_{1}  + P_{3}P_{2}P_{1}C_{0}) &#x3D; G_{4} + P_{4}G_{3} + P_{4}P_{3}G_{2}  + P_{4}P_{3}P_{2}G_{1} + P_{4}P_{3}P_{2}P_{1}C_{0}<br>\end{align}<br>$$</p>
+<h4 id="带标志的加法器"><a href="#带标志的加法器" class="headerlink" title="带标志的加法器"></a>带标志的加法器</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/06.png"
+                     
+                ></p>
+<h5 id="溢出标志-Overflow-Flag-OF"><a href="#溢出标志-Overflow-Flag-OF" class="headerlink" title="溢出标志(Overflow Flag, OF)"></a>溢出标志(Overflow Flag, OF)</h5><p>$$<br>OF &#x3D; C_{n} \oplus C_{n - 1}<br>$$</p>
+<h5 id="符号标志-Sign-Flag-SF"><a href="#符号标志-Sign-Flag-SF" class="headerlink" title="符号标志(Sign Flag, SF)"></a>符号标志(Sign Flag, SF)</h5><p>$$<br>SF &#x3D; S_{n}<br>$$</p>
+<h5 id="零标志-Zero-Flag-ZF"><a href="#零标志-Zero-Flag-ZF" class="headerlink" title="零标志(Zero Flag, ZF)"></a>零标志(Zero Flag, ZF)</h5><p>$$<br>ZF &#x3D; S_{n} + S_{n - 1} + … + S_{2} + S_{1}<br>$$</p>
+<h5 id="进位-借位标志-Carry-Flag-CF"><a href="#进位-借位标志-Carry-Flag-CF" class="headerlink" title="进位&#x2F;借位标志(Carry Flag, CF)"></a>进位&#x2F;借位标志(Carry Flag, CF)</h5><p>$$<br>CF &#x3D; C_{out} \oplus C_{in} &#x3D; C_{n} \oplus C_{0}<br>$$</p>
+<h3 id="定点数的移位运算"><a href="#定点数的移位运算" class="headerlink" title="定点数的移位运算"></a>定点数的移位运算</h3><hr>
+<h4 id="算数移位"><a href="#算数移位" class="headerlink" title="算数移位"></a>算数移位</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/07.png"
+                     
+                ></p>
+<h4 id="逻辑移位"><a href="#逻辑移位" class="headerlink" title="逻辑移位"></a>逻辑移位</h4><h4 id="循环移位"><a href="#循环移位" class="headerlink" title="循环移位"></a>循环移位</h4><h3 id="定点数的加减运算"><a href="#定点数的加减运算" class="headerlink" title="定点数的加减运算"></a>定点数的加减运算</h3><hr>
+<h4 id="原码的加减运算"><a href="#原码的加减运算" class="headerlink" title="原码的加减运算"></a>原码的加减运算</h4><h4 id="补码的加减运算"><a href="#补码的加减运算" class="headerlink" title="补码的加减运算"></a>补码的加减运算</h4><p>负数补码, 最右边的1及其右边同原码, 最右边的1及其右边同反码。</p>
+<p>$ [-A]_{补}: [A]_{补} $ 连同符号位一起取反加1。</p>
+<h4 id="补码加减运算电路"><a href="#补码加减运算电路" class="headerlink" title="补码加减运算电路"></a>补码加减运算电路</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/08.png"
+                     
+                ></p>
+<h4 id="溢出判别方法"><a href="#溢出判别方法" class="headerlink" title="溢出判别方法"></a>溢出判别方法</h4><p>正数 + 正数 &#x3D; 负数, 发生“上溢”。</p>
+<p>负数 + 负数 &#x3D; 正数, 发生“下溢”。</p>
+<p>若 $ V $ &#x3D; 0, 表示无溢出; 若 $ V $ &#x3D; 1, 表示有溢出。</p>
+<h5 id="采用一位符号位"><a href="#采用一位符号位" class="headerlink" title="采用一位符号位"></a>采用一位符号位</h5><p>设A的符号为 $ A_{s} $, B的符号为$ B_{s} $, 运算结果的符号为 $ S_{s} $。</p>
+<ol>
+<li>$ C_{s}C_{1} &#x3D; 01 $: 发生正溢出。</li>
+<li>$ C_{s}C_{1} &#x3D; 10 $: 产生负溢出。</li>
+</ol>
+<p>则溢出逻辑表达式为</p>
+<p>$$<br>V &#x3D; A_{s}B_{s} \bar{S_{s} } + \bar{A_{s} } \bar{B_{s} } S_{s}<br>$$<br>若 $ V $ &#x3D; 0, 表示无溢出; 若 $ V $ &#x3D; 1, 表示有溢出。</p>
+<h5 id="采用双符号位"><a href="#采用双符号位" class="headerlink" title="采用双符号位"></a>采用双符号位</h5><p>单符号位法, 模2补码; 双符号位法, 模4补码。</p>
+<p>运算结果的两个符号位 $ S_{1}S_{2} $ 相同, 表示未溢出;</p>
+<p>运算结果的两个符号位 $ S_{1}S_{2} $ 不同, 表示溢出, 此时最高位符号位代表真正的符号。</p>
+<p>符号位 $ S_{1}S_{2} $ 的各种情况如下:</p>
+<ol>
+<li><p>$ S_{1}S_{2} $ &#x3D; 00: 表示结果为正数, 无溢出。</p>
+</li>
+<li><p>$ S_{1}S_{2} $ &#x3D; 01: 表示结果正溢出。</p>
+</li>
+<li><p>$ S_{1}S_{2} $ &#x3D; 10: 表示结果负溢出。</p>
+</li>
+<li><p>$ S_{1}S_{2} $ &#x3D; 11: 表示结果为负数, 无溢出。</p>
+</li>
+</ol>
+<p>溢出逻辑判断表达式为<br>$$<br>V &#x3D;  S_{1} \oplus S_{2}<br>$$</p>
+<p>若 $ V $ &#x3D; 0, 表示无溢出; 若 $ V $ &#x3D; 1, 表示有溢出。</p>
+<h5 id="采用一号符号位根据数据位的进位情况判断溢出"><a href="#采用一号符号位根据数据位的进位情况判断溢出" class="headerlink" title="采用一号符号位根据数据位的进位情况判断溢出"></a>采用一号符号位根据数据位的进位情况判断溢出</h5><p>若符号位的进位 $ C_{s} $ 与最高数位的进位 $ C_{1} $相同, 则说明没有溢出, 否则表示发生溢出。溢出逻辑判断表达式为:<br>$$<br>V&#x3D; C_{s} \oplus C_{1}<br>$$</p>
+<p>若 $ V $ &#x3D; 0, 表示无溢出; 若 $ V $ &#x3D; 1, 表示有溢出。</p>
+<h3 id="定点数的乘除运算"><a href="#定点数的乘除运算" class="headerlink" title="定点数的乘除运算"></a>定点数的乘除运算</h3><hr>
+<h4 id="定点数的乘法运算"><a href="#定点数的乘法运算" class="headerlink" title="定点数的乘法运算"></a>定点数的乘法运算</h4><h5 id="符号扩展"><a href="#符号扩展" class="headerlink" title="符号扩展"></a>符号扩展</h5><p>正数符号扩展，符号位不变，新表示形式的所有扩展位都用0进行填充。</p>
+<p>负数符号扩展方法则根据机器数的不同而不同。</p>
+<p>原码表示负数的符号扩展方法与正数相同，只不过此时符号位为1。</p>
+<p>补码表示负数的符号扩展方法: 原有形式的符号位移动到新形式的符号位上，新表示形式的所有附加位都用1(对于整数)或0(对于小数)进行填充。</p>
+<h5 id="原码一位乘法"><a href="#原码一位乘法" class="headerlink" title="原码一位乘法"></a>原码一位乘法</h5><p>设 $ [X]_{原} &#x3D; x_{s}.x_{1}x_{2}···x_{n}, [Y]_{原} &#x3D; y_{s}.y_{1}y_{2}···y_{n} $</p>
+<ol>
+<li><p>被乘数和乘数均取绝对值参加运算, 看作无符号数, 符号位为 $ x_{s} \oplus y_{s} $ 。</p>
+</li>
+<li><p>部分积是乘法过程的中间结果。乘数的每一位 $ y_{i} $ 乘以被乘数得 $ X \times y_{i} $ 后, 将该结果与前面所得的结果累加, 就是部分积, 初值为0。</p>
+</li>
+<li><p>从乘数的最低位开始判断, 若 $ y_{n} $ &#x3D; 1, 则部分积加上被乘数 $ |x| $, 然后右移一位; 若 $ y_{n} $ &#x3D; 0, 则部分积加上0, 然后右移一位。</p>
+</li>
+<li><p>重复步骤3, 判断n次。</p>
+</li>
+</ol>
+<h6 id="运算器实现"><a href="#运算器实现" class="headerlink" title="运算器实现"></a>运算器实现</h6><p>符号位 &#x3D; $ S_{X_{被乘数} } \oplus S_{X_{被乘数} } $</p>
+<ol>
+<li><p>$ | X_{被乘数} | \to X $</p>
+</li>
+<li><p>$ | X_{乘数} | \to MQ $ (MQ存储乘数, 乘积低位)</p>
+</li>
+<li><p>$ 置零ACC $  (ACC存储乘积高位, 高位和低位称为部分积)</p>
+</li>
+<li><p>$ if[(MQ)_{0} &#x3D; 1], (ACC) + (X) \to ACC  $</p>
+<p> $if[(MQ)_{0} &#x3D; 0], (ACC) + 0 \to ACC  $</p>
+</li>
+<li><p>$ [(ACC + MQ) &gt;&gt; 1] \to (ACC + MQ) $ (逻辑右移)</p>
+</li>
+<li><p>重复45, 直到MQ全是乘积低位, 没乘数位</p>
+</li>
+<li><p>$ 符号位 \to (ACC)n $</p>
+</li>
+<li><p>结果是 (ACC + MQ)</p>
+</li>
+</ol>
+<h5 id="补码一位乘法-Booth算法"><a href="#补码一位乘法-Booth算法" class="headerlink" title="补码一位乘法(Booth算法)"></a>补码一位乘法(Booth算法)</h5><p>设 $ [X]_{补} &#x3D; x_{s}.x_{1}x_{2}···x_{n}, [Y]_{补} &#x3D; y_{s}.y_{1}y_{2}···y_{n} $</p>
+<ol>
+<li><p>符号位参与运算, 运算的数均以补码表示。</p>
+</li>
+<li><p>被乘数一般取双符号位参与运算, 部分积取双符号位, 初值为0, 乘数取单符号位。</p>
+</li>
+<li><p>乘数末位增设附加位 $ y_{n + 1} $, 初值为0。</p>
+</li>
+<li><p>根据($ y_{n}, y_{n + 1} $)的取值来确定操作。</p>
+</li>
+<li><p>移位按补码右移规则进行。</p>
+</li>
+<li><p>按照上述算法进行n+1步操作, 但第n+1步不再移位(共进行n+1次累加和n次右移),仅根据 $ {y_n} $ 与 $ y_{n + 1} $ 的比较结果做相应的运算。</p>
+</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/09.png"
+                     
+                ></p>
+<h6 id="运算器实现-1"><a href="#运算器实现-1" class="headerlink" title="运算器实现"></a>运算器实现</h6><ol>
+<li><p>$ [X_{被乘数}]_{补(双符号位)} \to X $</p>
+</li>
+<li><p>$ [ X_{乘数} ]_{补(单符号位)} \to (MQ)_{1-n}, 0 \to (MQ)_{0} $ ($ MQ_{0} $ 称为辅助位) </p>
+</li>
+<li><p>$ 置零ACC $  (ACC也采用双符号位)</p>
+</li>
+<li><p>$ if[(MQ)_{0} - (MQ)_{1} &#x3D; 1], (ACC) + (X) \to ACC  $</p>
+</li>
+</ol>
+<p>  $ if[(MQ)_{0} - (MQ)_{1} &#x3D; 0], (ACC) + 0 \to ACC  $</p>
+<p>  $ if[(MQ)_{0} - (MQ)_{1} &#x3D; -1], (ACC) + [(-X)]_{补} \to ACC  $ (有辅助电路, 把 $ [x]_{补} $ 快速转换成 $<br>  [-x]_{补} $)</p>
+<ol start="5">
+<li><p>$ [(ACC + MQ) &gt;&gt; 1] \to (ACC + MQ) $ (算数右移)</p>
+</li>
+<li><p>重复45, 直到MQ剩乘数原符号位, 执行一次4。</p>
+</li>
+<li><p>结果是 (ACC + $ MQ_{n - 1} $) (ACC是双符号位)</p>
+</li>
+</ol>
+<h5 id="补码乘法运算电路"><a href="#补码乘法运算电路" class="headerlink" title="补码乘法运算电路"></a>补码乘法运算电路</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/10.png"
+                     
+                ></p>
+<h4 id="定点数的除法运算"><a href="#定点数的除法运算" class="headerlink" title="定点数的除法运算"></a>定点数的除法运算</h4><h5 id="原码除法运算-相同步骤抽象"><a href="#原码除法运算-相同步骤抽象" class="headerlink" title="原码除法运算(相同步骤抽象)"></a>原码除法运算(相同步骤抽象)</h5><p>设被除数 $ [X]_{原} &#x3D; x_{s}.x_{1}x_{2}···x_{n} $, 除数 $ [Y]_{原} &#x3D; y_{s}.y_{1}y_{2}···y_{n} $</p>
+<ol>
+<li>商的符号: $ Q_{s} &#x3D; x_{s} \oplus y_{s} $。</li>
+<li>商的数值: $ |Q| &#x3D; |X| &#x2F; |Y| $。</li>
+</ol>
+<p>(定点小数，规定$ |X| \gt |Y| $)</p>
+<h6 id="运算器实现-2"><a href="#运算器实现-2" class="headerlink" title="运算器实现"></a>运算器实现</h6><p>符号位 &#x3D; $ S_{X_{被乘数} } \oplus S_{X_{被乘数} } $</p>
+<ol>
+<li><p>$ | X_{被除数} | \to ACC $ (ACC存储被除数, 余数)</p>
+</li>
+<li><p>$ | X_{除数} | \to X $ </p>
+</li>
+<li><p>$ 置零MQ $ (MQ低位为待确定的商)</p>
+</li>
+</ol>
+<p>(定点小数, 第一次执行, 商必须是0, 否则违反$ |X| \gt |Y| $)</p>
+<h5 id="原码除法运算-恢复余数法"><a href="#原码除法运算-恢复余数法" class="headerlink" title="原码除法运算(恢复余数法)"></a>原码除法运算(恢复余数法)</h5><p>当余数为负时, 商上0，余数加回除数，左移一位。</p>
+<h6 id="运算器实现-3"><a href="#运算器实现-3" class="headerlink" title="运算器实现"></a>运算器实现</h6><ol>
+<li>$ 先上商1 \to MQ_{0}, (ACC) - (X) \to ACC $ $ \{(ACC) - (X) &#x3D; (ACC) + [-(X)] &#x3D; (ACC) + [-(X)]_{补} \} $</li>
+<li>$ if[(ACC)_{n} &#x3D; 1], (ACC) + (X) \to ACC, 0 \to MQ_{0} $ $ \{ (ACC) + (X) &#x3D; (ACC) + [(X)]_{补}<br>\} $</li>
+<li>$ [(ACC + MQ) &lt;&lt; 1] \to (ACC + MQ) $ (逻辑左移, 最后一次不用)</li>
+<li>重复123, 直到MQ全是商。</li>
+<li>$ 符号位 \to (MQ)n $</li>
+<li>商是(MQ), 余数是(ACC)</li>
+</ol>
+<p>(最后一位不够除，也要恢复) </p>
+<h5 id="原码除法运算-不恢复余数法-加减交替法"><a href="#原码除法运算-不恢复余数法-加减交替法" class="headerlink" title="原码除法运算(不恢复余数法, 加减交替法)"></a>原码除法运算(不恢复余数法, 加减交替法)</h5><p>当余数为正时，商上1，余数和商左移一位，再减去除数;</p>
+<p>当余数为负时，商上0，余数和商左移一位，再加上除数;</p>
+<p>当第n+1步余数为负时，需加上Y得到第n+1步正确的余数(余数与被除数同号)。<br>$$<br>[a(负) + b] &lt;&lt; 1 - b &#x3D; 2a + b &#x3D; a &lt;&lt; 1 + b<br>$$</p>
+<h6 id="运算器实现-4"><a href="#运算器实现-4" class="headerlink" title="运算器实现"></a>运算器实现</h6><ol>
+<li>$ 1 \to MQ_{0}, (ACC) - (X) \to ACC $ $ \{(ACC) - (X) &#x3D; (ACC) + [-(X)] &#x3D; (ACC) + [-(X)]_{补} \} $(第一次不执行3)</li>
+<li>$ if[(ACC)_{n} &#x3D; 1], 0 \to MQ_{0}, 在3左移后, (ACC) + (X) \to ACC $</li>
+<li>$ if[(ACC)_{n} &#x3D; 0], 0 \to MQ_{0}, 在3左移后, (ACC) - (X) \to ACC $</li>
+<li>$ [(ACC + MQ) &lt;&lt; 1] \to (ACC + MQ) $ (逻辑左移, 最后一次不用)</li>
+<li>重复234, 直到MQ全是商。</li>
+<li>$ 符号位 \to (MQ)n $</li>
+<li>商是(MQ), 余数是(ACC)</li>
+</ol>
+<p>(最后一位不够除，也要恢复) </p>
+<h5 id="补码除法运算-加减交替法"><a href="#补码除法运算-加减交替法" class="headerlink" title="补码除法运算(加减交替法)"></a>补码除法运算(加减交替法)</h5><ol>
+<li>符号位与数值位一起参加运算。</li>
+<li>根据被除数和除数的符号决定是做加法还是减法, 上商的原则根据余数和除数的符号位共同决定，同号上商“1”，异号上商“0”:最后一步商恒置“1”</li>
+<li>除数与被除数均用补码表示，商和余数也用补码表示, 都采用双符号位。</li>
+<li>若被除数与除数同号，则被除数减去除数; 若被除数与除数异号，则被除数加上除数。</li>
+<li>若余数与除数同号，则商上1，余数左移一位减去除数; 若余数与除数异号，则商上0, 余数左移一位加上除数。</li>
+<li>重复执行操作5。</li>
+<li>若对商的精度没有特殊要求，则一般采用“末位恒置1”法。</li>
+</ol>
+<h5 id="除法运算电路"><a href="#除法运算电路" class="headerlink" title="除法运算电路"></a>除法运算电路</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/11.png"
+                     
+                ></p>
+<h3 id="数据的存储和排列"><a href="#数据的存储和排列" class="headerlink" title="数据的存储和排列"></a>数据的存储和排列</h3><hr>
+<h4 id="数据的“大端方式”和“小端方式”存储"><a href="#数据的“大端方式”和“小端方式”存储" class="headerlink" title="数据的“大端方式”和“小端方式”存储"></a>数据的“大端方式”和“小端方式”存储</h4><h5 id="最高有效字节-Most-Significant-Byte-MSB"><a href="#最高有效字节-Most-Significant-Byte-MSB" class="headerlink" title="最高有效字节(Most Significant Byte, MSB)"></a>最高有效字节(Most Significant Byte, MSB)</h5><h5 id="最低有效字节-Least-Significant-Byte-LSB"><a href="#最低有效字节-Least-Significant-Byte-LSB" class="headerlink" title="最低有效字节(Least Significant Byte, LSB)"></a>最低有效字节(Least Significant Byte, LSB)</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/12.png"
+                     
+                ></p>
+<h5 id="大端方式"><a href="#大端方式" class="headerlink" title="大端方式"></a>大端方式</h5><p>大端方式按从最高有效字节到最低有效字节的顺序存储数据，即最高有效字节存放在前面，便于人类阅读。</p>
+<h5 id="小端方式"><a href="#小端方式" class="headerlink" title="小端方式"></a>小端方式</h5><p>小端方式按从最低有效字节到最高有效字节的顺序存储数据，即最低有效字节存放在前面，便于机器处理。</p>
+<h4 id="数据按“边界对齐”方式存储"><a href="#数据按“边界对齐”方式存储" class="headerlink" title="数据按“边界对齐”方式存储"></a>数据按“边界对齐”方式存储</h4><p>按字节编址，每个字节对应一个地址。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/13.png"
+                     
+                ></p>
+<h5 id="边界对齐方式"><a href="#边界对齐方式" class="headerlink" title="边界对齐方式"></a>边界对齐方式</h5><p>无论所取的数据是字节、半字还是字，均可一次访存取出。所存储的数据不满足上述要求时，通过填充空白字节使其符合要求。这样虽然浪费了一些存储空间，但可提高取指令和取数的速度。</p>
+<h5 id="边界不对齐方式"><a href="#边界不对齐方式" class="headerlink" title="边界不对齐方式"></a>边界不对齐方式</h5><p>数据不按边界对齐方式存储时，可以充分利用存储空间，但半字长或字长的指令可能会存储在两个存储字中，此时需要两次访存，并且对高低字节的位置进行调整、连接之后才能得到所要的指令或数据，从而影响了指令的执行效率。</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><hr>
+<h4 id="ALU属于什么类型的电路"><a href="#ALU属于什么类型的电路" class="headerlink" title="ALU属于什么类型的电路"></a>ALU属于什么类型的电路</h4><p>ALU是由组合逻辑电路构成的，最基本的部件是并行加法器。</p>
+<p>由于单纯的ALU 不能够存储运算结果和中间变量，往往将ALU和寄存器或暂存器相连。</p>
+<h4 id="构成运算器的部件"><a href="#构成运算器的部件" class="headerlink" title="构成运算器的部件"></a>构成运算器的部件</h4><p>ALU为运算器核心，数据总线供 ALU 与外界交互数据使用，溢出标志即为一个状态寄存器。</p>
+<p>地址寄存器不属于运算器，而属于存储器, <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84#CPU%E5%8F%AF%E8%83%BD%E6%9C%89%E5%9C%B0%E5%9D%80%E5%AF%84%E5%AD%98%E5%99%A8">区分在CPU中的地址寄存器</a>。</p>
+<h4 id="补码加减运算电路-1"><a href="#补码加减运算电路-1" class="headerlink" title="补码加减运算电路"></a>补码加减运算电路</h4><p>负数，输入取反，进位为1。</p>
+<hr>
+<p>COPYRIGHT (c) OLENCER. ALL RIGHTS RESERVED.</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 运算方法和运算电路</li>
+        <li><strong>Author:</strong> OLENCER.</li>
+        <li><strong>Created at
+                :</strong> 2023-08-16 23:21:06</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-08-20 20:46:03
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://olencer.github.io/考研/408/计算机组成原理/运算方法和运算电路/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/%E8%80%83%E7%A0%94/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">运算方法和运算电路</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/%E8%80%83%E7%A0%94/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E5%88%B6%E5%92%8C%E7%BC%96%E7%A0%81/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">数制和编码</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://blog-comments-olencer.vercel.app/',
+          lang: 'en-US',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">运算方法和运算电路</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E9%83%A8%E4%BB%B6"><span class="nav-text">基本运算部件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E5%8A%A0%E5%99%A8-Full-Adder-FA"><span class="nav-text">全加器(Full-Adder, FA)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E8%BF%9B%E4%BD%8D%E7%9A%84%E5%B9%B6%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8-%E8%A1%8C%E6%B3%A2%E8%BF%9B%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8-Ripple-Carry-Adders-RIP"><span class="nav-text">串行进位的并行加法器(行波进位加法器, Ripple-Carry Adders, RIP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E8%BF%9B%E4%BD%8D%E7%9A%84%E5%B9%B6%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8-%E8%B6%85%E5%89%8D%E8%BF%9B%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8-Carry-Lookahead-Adders-CLA"><span class="nav-text">并行进位的并行加法器(超前进位加法器, Carry-Lookahead Adders, CLA)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6%E6%A0%87%E5%BF%97%E7%9A%84%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="nav-text">带标志的加法器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA%E6%A0%87%E5%BF%97-Overflow-Flag-OF"><span class="nav-text">溢出标志(Overflow Flag, OF)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E6%A0%87%E5%BF%97-Sign-Flag-SF"><span class="nav-text">符号标志(Sign Flag, SF)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%B6%E6%A0%87%E5%BF%97-Zero-Flag-ZF"><span class="nav-text">零标志(Zero Flag, ZF)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%9B%E4%BD%8D-%E5%80%9F%E4%BD%8D%E6%A0%87%E5%BF%97-Carry-Flag-CF"><span class="nav-text">进位&#x2F;借位标志(Carry Flag, CF)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="nav-text">定点数的移位运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E7%A7%BB%E4%BD%8D"><span class="nav-text">算数移位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%A7%BB%E4%BD%8D"><span class="nav-text">逻辑移位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%A7%BB%E4%BD%8D"><span class="nav-text">循环移位</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="nav-text">定点数的加减运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="nav-text">原码的加减运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="nav-text">补码的加减运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF"><span class="nav-text">补码加减运算电路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA%E5%88%A4%E5%88%AB%E6%96%B9%E6%B3%95"><span class="nav-text">溢出判别方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E4%B8%80%E4%BD%8D%E7%AC%A6%E5%8F%B7%E4%BD%8D"><span class="nav-text">采用一位符号位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E5%8F%8C%E7%AC%A6%E5%8F%B7%E4%BD%8D"><span class="nav-text">采用双符号位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E4%B8%80%E5%8F%B7%E7%AC%A6%E5%8F%B7%E4%BD%8D%E6%A0%B9%E6%8D%AE%E6%95%B0%E6%8D%AE%E4%BD%8D%E7%9A%84%E8%BF%9B%E4%BD%8D%E6%83%85%E5%86%B5%E5%88%A4%E6%96%AD%E6%BA%A2%E5%87%BA"><span class="nav-text">采用一号符号位根据数据位的进位情况判断溢出</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97"><span class="nav-text">定点数的乘除运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97"><span class="nav-text">定点数的乘法运算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E6%89%A9%E5%B1%95"><span class="nav-text">符号扩展</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E4%B8%80%E4%BD%8D%E4%B9%98%E6%B3%95"><span class="nav-text">原码一位乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E5%AE%9E%E7%8E%B0"><span class="nav-text">运算器实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E4%B8%80%E4%BD%8D%E4%B9%98%E6%B3%95-Booth%E7%AE%97%E6%B3%95"><span class="nav-text">补码一位乘法(Booth算法)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E5%AE%9E%E7%8E%B0-1"><span class="nav-text">运算器实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF"><span class="nav-text">补码乘法运算电路</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97"><span class="nav-text">定点数的除法运算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97-%E7%9B%B8%E5%90%8C%E6%AD%A5%E9%AA%A4%E6%8A%BD%E8%B1%A1"><span class="nav-text">原码除法运算(相同步骤抽象)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E5%AE%9E%E7%8E%B0-2"><span class="nav-text">运算器实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97-%E6%81%A2%E5%A4%8D%E4%BD%99%E6%95%B0%E6%B3%95"><span class="nav-text">原码除法运算(恢复余数法)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E5%AE%9E%E7%8E%B0-3"><span class="nav-text">运算器实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97-%E4%B8%8D%E6%81%A2%E5%A4%8D%E4%BD%99%E6%95%B0%E6%B3%95-%E5%8A%A0%E5%87%8F%E4%BA%A4%E6%9B%BF%E6%B3%95"><span class="nav-text">原码除法运算(不恢复余数法, 加减交替法)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E5%AE%9E%E7%8E%B0-4"><span class="nav-text">运算器实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97-%E5%8A%A0%E5%87%8F%E4%BA%A4%E6%9B%BF%E6%B3%95"><span class="nav-text">补码除法运算(加减交替法)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF"><span class="nav-text">除法运算电路</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E6%8E%92%E5%88%97"><span class="nav-text">数据的存储和排列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E2%80%9C%E5%A4%A7%E7%AB%AF%E6%96%B9%E5%BC%8F%E2%80%9D%E5%92%8C%E2%80%9C%E5%B0%8F%E7%AB%AF%E6%96%B9%E5%BC%8F%E2%80%9D%E5%AD%98%E5%82%A8"><span class="nav-text">数据的“大端方式”和“小端方式”存储</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%80%E9%AB%98%E6%9C%89%E6%95%88%E5%AD%97%E8%8A%82-Most-Significant-Byte-MSB"><span class="nav-text">最高有效字节(Most Significant Byte, MSB)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%80%E4%BD%8E%E6%9C%89%E6%95%88%E5%AD%97%E8%8A%82-Least-Significant-Byte-LSB"><span class="nav-text">最低有效字节(Least Significant Byte, LSB)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%A7%E7%AB%AF%E6%96%B9%E5%BC%8F"><span class="nav-text">大端方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%8F%E7%AB%AF%E6%96%B9%E5%BC%8F"><span class="nav-text">小端方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%89%E2%80%9C%E8%BE%B9%E7%95%8C%E5%AF%B9%E9%BD%90%E2%80%9D%E6%96%B9%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-text">数据按“边界对齐”方式存储</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BE%B9%E7%95%8C%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="nav-text">边界对齐方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BE%B9%E7%95%8C%E4%B8%8D%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="nav-text">边界不对齐方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ALU%E5%B1%9E%E4%BA%8E%E4%BB%80%E4%B9%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%94%B5%E8%B7%AF"><span class="nav-text">ALU属于什么类型的电路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E6%88%90%E8%BF%90%E7%AE%97%E5%99%A8%E7%9A%84%E9%83%A8%E4%BB%B6"><span class="nav-text">构成运算器的部件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97%E7%94%B5%E8%B7%AF-1"><span class="nav-text">补码加减运算电路</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">OLENCER.</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        66 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.1</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

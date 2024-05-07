@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="OLENCER.">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://olencer.github.io/考研/301/高等数学/连续性、间断点、渐近线/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="false">
+<meta property="og:type" content="article">
+<meta property="og:title" content="连续性、间断点、渐近线">
+<meta property="og:url" content="https://olencer.github.io/%E8%80%83%E7%A0%94/301/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E8%BF%9E%E7%BB%AD%E6%80%A7%E3%80%81%E9%97%B4%E6%96%AD%E7%82%B9%E3%80%81%E6%B8%90%E8%BF%91%E7%BA%BF/index.html">
+<meta property="og:site_name" content="竫酲OLENCER.">
+<meta property="og:description" content="false">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-08-15T02:57:12.000Z">
+<meta property="article:modified_time" content="2023-08-16T15:26:46.000Z">
+<meta property="article:author" content="olencer">
+<meta name="twitter:card" content="summary">
+    
+    
+        <!-- Google tag (gtag.js) -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-0HWLL8FQLY"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0HWLL8FQLY');
+        </script>
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.jpg">
+    <meta name="theme-color" content="#add8e6">
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            连续性、间断点、渐近线 -
+        
+        OLENCER&#39;s blog.
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    
+<script src="/js/libs/anime.min.js"></script>
+
+    <h1 class="ml13">
+        OLENCER&#39;s blog.
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    <!--- Font Part-->
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    
+    
+    
+
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"olencer.github.io","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Infinity"]},"code_block":{"copy":true,"style":"mac","font":{"enable":true,"family":"JetBrains Mono","url":"https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#add8e6","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":"LXGWWenKai","url":null},"english":{"enable":false,"family":"JetBrains Mono","url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":true,"id":"G-0HWLL8FQLY"}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"竫酲OLENCER.","subtitle":{"text":["竫饮青从，醉享酲红。"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/OLENCER","instagram":null,"zhihu":null,"twitter":"https://twitter.com/0lencer","email":"jing255629@gmail.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":true,"version":"10.9.0"}},"version":"2.6.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":10},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Category":{"path":"/categories","icon":"fa-regular fa-folder"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"恭候多时","links":null},"article_date_format":"auto","categories":{"enable":true,"limit":6},"tags":{"enable":true,"limit":3}},"footerStart":"2023/5/14 00:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                OLENCER&#39;s blog.
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    CATEGORY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-regular fa-tags fa-fw"></i>
+                                    TAGS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                CATEGORY
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                TAGS
+                            </span>
+                            
+                                <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">66</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                
+                
+                <img src="/images/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/00.jpg" alt="连续性、间断点、渐近线" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-start">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-bold backdrop-blur-lg rounded-xl border border-border-color ">连续性、间断点、渐近线</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/favicon.jpg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">OLENCER.</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Infinity</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-08-15 10:57:12</span>
+        <span class="mobile">2023-08-15 10:57:12</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-08-16 23:26:46</span>
+            <span class="mobile">2023-08-16 23:26:46</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%80%83%E7%A0%94/">考研</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E8%80%83%E7%A0%94/301/">301</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E8%80%83%E7%A0%94/301/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">高等数学</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h3 id="连续性和间断点"><a href="#连续性和间断点" class="headerlink" title="连续性和间断点"></a>连续性和间断点</h3><hr>
+<h4 id="连续性"><a href="#连续性" class="headerlink" title="连续性"></a>连续性</h4><p>若 $ \lim \limits _{x \to a} {f(x)} &#x3D; f(a)$ ，则称 $ f(x) $ 在 $ x &#x3D; a $ 处连续。</p>
+<p>若 $ f(x) $ 在 $ (a,b) $ 内的每一点都连续，则称 $ f(x) $ 在 $ (a,b) $ 内连续。</p>
+<p>若 $ f(x) $ 在 $ (a,b) $ 连续的前提下，还有 $ f(a) &#x3D; f(a + 0) $ ，$ f(b) &#x3D; f(b - 0) $ ，则称 $ f(x) $在 $ [a,b] $ 连续。</p>
+<h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><ol>
+<li>两个连续函数经过加、减、乘、除（需要保证分母不为零）、复合运算后的函数，仍然是连续函数。</li>
+<li>初等函数在其定义区间一定连续(对反幂指三)</li>
+<li>把 $ \lim \limits _{x \to a} {f(x)} &#x3D; f(a)$ 写成增量形式 $ \lim \limits _{\Delta{x} \to 0} {f(a + \Delta{x})} &#x3D; f(a)$ ，这两种写法没有本质上的区别，但是有些证明题中往往使用第二种形式会更加方便，尤其是证明抽象函数的连续性时。</li>
+</ol>
+<h4 id="间断点"><a href="#间断点" class="headerlink" title="间断点"></a>间断点</h4><h5 id="第一类间断点"><a href="#第一类间断点" class="headerlink" title="第一类间断点"></a>第一类间断点</h5><p>$ f(a - 0) $ 和 $ f(a + 0) $ 都存在</p>
+<h6 id="可去间断点"><a href="#可去间断点" class="headerlink" title="可去间断点"></a>可去间断点</h6><p>$ f(a - 0) &#x3D; f(a + 0) \neq f(a) $ , 则称 $ x &#x3D; a $ 为可去间断点。</p>
+<h6 id="跳跃间断点"><a href="#跳跃间断点" class="headerlink" title="跳跃间断点"></a>跳跃间断点</h6><p>$ f(a - 0) \neq f(a + 0) $ , 则称 $ x &#x3D; a $ 为跳跃间断点。</p>
+<h6 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h6><p>$ f(a - 0) &#x3D; f(a + 0) $ , 但 $ f(a) $ 无定义，$ x &#x3D; a $ 也是可去间断点。</p>
+<h5 id="第二类间断点"><a href="#第二类间断点" class="headerlink" title="第二类间断点"></a>第二类间断点</h5><p>若 $ f(a - 0) $ 和 $ f(a + 0) $ 中至少有一个不存在，则称 $ x &#x3D; a $ 为 $ f(a) $ 的第二类间断点。</p>
+<h6 id="无穷间断点"><a href="#无穷间断点" class="headerlink" title="无穷间断点"></a>无穷间断点</h6><p>若 $ f(a - 0) $ 和 $ f(a + 0) $ 至少有一个是 $ \infty $ ，则称 $ x &#x3D; a $ 是无穷间断点。</p>
+<h6 id="震荡间断点"><a href="#震荡间断点" class="headerlink" title="震荡间断点"></a>震荡间断点</h6><p>若 $ f(a - 0) $ 和 $ f(a + 0) $ 至少有一个是上下震荡，则称 $ x &#x3D; a $ 是震荡间断点。</p>
+<h4 id="闭区间上连续函数的性质"><a href="#闭区间上连续函数的性质" class="headerlink" title="闭区间上连续函数的性质"></a>闭区间上连续函数的性质</h4><h5 id="最值定理"><a href="#最值定理" class="headerlink" title="最值定理"></a>最值定理</h5><p>设 $ f(x) \in C[a, b] $, 则 $ f(x) $ 在 $ [a, b] $ 上一定存在最大值 $ M $ 和最小值 $ m $。</p>
+<h5 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h5><p>设 $ f(x) \in C[a, b] $, 则对于 $ \forall{k} \in [m, M] $, 均 $ \exists{\xi} \in [a, b] $ , 使得$ f(\xi) &#x3D; k $。</p>
+<h5 id="零点定理"><a href="#零点定理" class="headerlink" title="零点定理"></a>零点定理</h5><p>设 $ f(x) \in C[a, b] $, 且 $ f(a)f(b) \lt 0 $, 则 $ \exists{\xi} \in (a, b) $ , 使得$ f(\xi) &#x3D; 0 $。</p>
+<h3 id="渐近线"><a href="#渐近线" class="headerlink" title="渐近线"></a>渐近线</h3><hr>
+<h4 id="水平渐近线"><a href="#水平渐近线" class="headerlink" title="水平渐近线"></a>水平渐近线</h4><p>若 $ \lim \limits _{x \to + \infty} {f(x)} &#x3D; A $ ,则称直线 $ y &#x3D; A $ 是曲线 $ y &#x3D; f(x) $ 的一条水平渐近线。</p>
+<p>同理，若 $ \lim \limits _{x \to - \infty} {f(x)} &#x3D; B $，则称直线 $ y &#x3D; B $ 也是曲线 $ y &#x3D; f(x) $ 的一条水平渐近线。</p>
+<h5 id="注意-2"><a href="#注意-2" class="headerlink" title="注意"></a>注意</h5><ol>
+<li>水平渐近线最多只能有两条！</li>
+</ol>
+<h4 id="竖直渐近线"><a href="#竖直渐近线" class="headerlink" title="竖直渐近线"></a>竖直渐近线</h4><p>若 $ \lim \limits _{x \to a} {f(x)} &#x3D; \infty $ 或 $ \lim \limits _{x \to a^{-} } {f(x)} &#x3D; \infty $ 或 $ \lim \limits _{x \to a^{+} } {f(x)} &#x3D; \infty $ ，则称直线 $ x &#x3D; a $ 为曲线 $ y &#x3D; f(x) $ 的竖直渐近线。</p>
+<h5 id="注意-3"><a href="#注意-3" class="headerlink" title="注意"></a>注意</h5><ol>
+<li>竖直渐近线可以有无数条。</li>
+<li>竖直渐近线所在的位置，一定是间断点的位置；但间断点的位置，不一定有竖直渐近线。</li>
+</ol>
+<h4 id="斜渐近线"><a href="#斜渐近线" class="headerlink" title="斜渐近线"></a>斜渐近线</h4><p>若 $ \lim \limits _{x \to + \infty} { \frac{f(x)}{x} } &#x3D; a(a \neq 0) $ ,且 $  \lim \limits _{x \to + \infty} {[f(x) - ax]} &#x3D; b $ 则称 $ y &#x3D; ax + b $ 是 $ y &#x3D; f(x) $ 的一条斜渐近线。</p>
+<h5 id="注意-4"><a href="#注意-4" class="headerlink" title="注意"></a>注意</h5><ol>
+<li>斜渐近线最多也只能有两条，并且水平渐近线和斜渐近线总共也最多只有两条，且在同一方向上，水平与斜不能共存。</li>
+</ol>
+<hr>
+<p>COPYRIGHT (c) OLENCER. ALL RIGHTS RESERVED.</p>
+<p>​       </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 连续性、间断点、渐近线</li>
+        <li><strong>Author:</strong> OLENCER.</li>
+        <li><strong>Created at
+                :</strong> 2023-08-15 10:57:12</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-08-16 23:26:46
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://olencer.github.io/考研/301/高等数学/连续性、间断点、渐近线/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/%E8%80%83%E7%A0%94/301/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E9%80%92%E6%8E%A8%E6%95%B0%E5%88%97%E7%9A%84%E6%9E%81%E9%99%90/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">递推数列的极限</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/%E8%80%83%E7%A0%94/201/%E8%AF%AD%E6%B3%95/%E7%AE%80%E5%8D%95%E5%8F%A5%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8F%98%E5%8C%96/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">简单句的核心变化</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://blog-comments-olencer.vercel.app/',
+          lang: 'en-US',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">连续性、间断点、渐近线</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%80%A7%E5%92%8C%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">连续性和间断点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="nav-text">连续性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">间断点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%B1%BB%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">第一类间断点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%AF%E5%8E%BB%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">可去间断点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%B7%B3%E8%B7%83%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">跳跃间断点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F-1"><span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">第二类间断点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%A0%E7%A9%B7%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">无穷间断点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9C%87%E8%8D%A1%E9%97%B4%E6%96%AD%E7%82%B9"><span class="nav-text">震荡间断点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AD%E5%8C%BA%E9%97%B4%E4%B8%8A%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">闭区间上连续函数的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%80%E5%80%BC%E5%AE%9A%E7%90%86"><span class="nav-text">最值定理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%8B%E5%80%BC%E5%AE%9A%E7%90%86"><span class="nav-text">介值定理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%B6%E7%82%B9%E5%AE%9A%E7%90%86"><span class="nav-text">零点定理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%90%E8%BF%91%E7%BA%BF"><span class="nav-text">渐近线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E6%B8%90%E8%BF%91%E7%BA%BF"><span class="nav-text">水平渐近线</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F-2"><span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%96%E7%9B%B4%E6%B8%90%E8%BF%91%E7%BA%BF"><span class="nav-text">竖直渐近线</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F-3"><span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%9C%E6%B8%90%E8%BF%91%E7%BA%BF"><span class="nav-text">斜渐近线</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F-4"><span class="nav-text">注意</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">OLENCER.</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        66 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.1</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
